@@ -6,16 +6,18 @@ This repo houses the cassandra setup on my development machine. I like version c
 
 ## Commands
 ### Starting the server
-> {cassandra_home}/bin/cassandra
+    {cassandra_home}/bin/cassandra
 
 ### Opening a cqlsh session against a running server
-> {cassandra_home}/bin/cqlsh
-
+    {cassandra_home}/bin/cqlsh
+    
 ### Create a new Keyspace
-> CREATE KEYSPACE {keyspace_name} WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+    CREATE KEYSPACE {keyspace_name} WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};    
+
 ## Setup Info
 ### Data dir
-> {cassandra_home}/data
+    {cassandra_home}/data
 
 ### Logs dir
-> {cassandra_home}/logs
+    {cassandra_home}/logs
+    
