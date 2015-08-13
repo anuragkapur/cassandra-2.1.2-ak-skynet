@@ -2,3 +2,7 @@ logs/
 data/
 
 *.pyc
+
+.idea/
+*.iml
+
