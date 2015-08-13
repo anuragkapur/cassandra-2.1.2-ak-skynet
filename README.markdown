@@ -10,9 +10,25 @@ This repo houses the cassandra setup on my development machine. I like version c
 
 ### Opening a cqlsh session against a running server
     {cassandra_home}/bin/cqlsh
+
+### Check version
+Simply login to CQLSH and the version number is displayed      
+Example: 
+
+    -sh-4.1$ cqlsh -u admin -p '********'
+    Connected to CassandraCluster at localhost:9160.
+    [cqlsh 4.1.1 | Cassandra 2.0.15 | CQL spec 3.1.1 | Thrift protocol 19.39.0]
+    Use HELP for help.
+    cqlsh>
     
 ### Create a new Keyspace
-    CREATE KEYSPACE {keyspace_name} WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};    
+    CREATE KEYSPACE {keyspace_name} WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+        
+### List all Keyspaces
+    describe keyspaces;   
+         
+### Drop Keyspace
+    drop keyspace {keyspace_name}         
 
 ## Setup Info
 ### Data dir
@@ -20,4 +36,8 @@ This repo houses the cassandra setup on my development machine. I like version c
 
 ### Logs dir
     {cassandra_home}/logs
+    
+### Auth details for local setup
+    admin/admin
+    
     
