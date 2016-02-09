@@ -21,14 +21,23 @@ Example:
     Use HELP for help.
     cqlsh>
     
-### Create a new Keyspace
+### Create a new keyspace
     CREATE KEYSPACE {keyspace_name} WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
         
-### List all Keyspaces
+### List all keyspaces
     describe keyspaces;   
          
-### Drop Keyspace
+### Use a keyspace
+    use {keyspace_name};
+         
+### Describe a keyspace (to view schema of all tables)         
+    describe keyspace {keyspace_name};
+    
+### Drop keyspace
     drop keyspace {keyspace_name}         
+
+### Simple select
+    select * from {table_name} where {column_name}={value} limit 10;
 
 ## Setup Info
 ### Data dir
