@@ -7,4 +7,5 @@ log/
 
 .idea/
 *.iml
+*.db
 
